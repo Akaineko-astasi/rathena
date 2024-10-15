@@ -538,6 +538,7 @@
 	export_constant(MF_NOBUYINGSTORE);
 	export_constant(MF_NODYNAMICNPC);
 	export_constant(MF_NOBANK);
+	export_constant(MF_SPECIALPOPUP);
 
 	/* setcell types */
 	export_constant(CELL_WALKABLE);
@@ -1915,6 +1916,13 @@
 	export_constant(SC_POWERUP);
 	export_constant(SC_AGIUP);
 	export_constant(SC_PROTECTION);
+	export_constant(SC_BATH_FOAM_A);
+	export_constant(SC_BATH_FOAM_B);
+	export_constant(SC_BATH_FOAM_C);
+	export_constant(SC_BUCHEDENOEL);
+	export_constant(SC_EP16_DEF);
+	export_constant(SC_STR_SCROLL);
+	export_constant(SC_INT_SCROLL);
 
 	/* status icons */
 	export_deprecated_constant2("SI_BLANK",-1);
@@ -3202,7 +3210,7 @@
 	export_constant(EFST_SPELLFIST);
 	export_constant(EFST_NETHERWORLD);
 	export_constant(EFST_SIREN);
-	export_constant(EFST_HANDICAPSTATE_DEEP_SLEEP);
+	export_constant(EFST_DEEP_SLEEP);
 	export_constant(EFST_SIRCLEOFNATURE);
 	export_constant(EFST_COLD);
 	export_constant(EFST_GLOOMYDAY);
@@ -3265,7 +3273,7 @@
 	export_constant(EFST_DROCERA_HERB_STEAMED);
 	export_constant(EFST_PUTTI_TAILS_NOODLES);
 	export_constant(EFST_BANANA_BOMB);
-	export_constant(XXX_EFST_SM_ELEMENTAL);
+	export_constant(EFST_SUMMON_AGNI);
 	export_constant(EFST_SPELLBOOK4);
 	export_constant(EFST_SPELLBOOK5);
 	export_constant(EFST_SPELLBOOK6);
@@ -3399,8 +3407,8 @@
 	export_constant(EFST_SET_NUM_MDEF);
 	export_constant(EFST_SET_PER_DEF);
 	export_constant(EFST_SET_PER_MDEF);
-	export_constant(EFST_PARTYBOOKING_SEARCH_DELAY);
-	export_constant(EFST_PARTYBOOKING_REGISTER_DELAY);
+	export_constant(EFST_PARTYBOOKING_SEARCH_DEALY);
+	export_constant(EFST_PARTYBOOKING_REGISTER_DEALY);
 	export_constant(EFST_PERIOD_TIME_CHECK_DETECT_SKILL);
 	export_constant(EFST_KO_JYUMONJIKIRI);
 	export_constant(EFST_MEIKYOUSISUI);
@@ -3441,7 +3449,7 @@
 	export_constant(EFST_GLASTHEIM_STATE);
 	export_constant(EFST_GLASTHEIM_ITEMDEF);
 	export_constant(EFST_GLASTHEIM_HPSP);
-	export_constant(EFST_FOLLOWER_NPC_SKILL_POSTDELAY);
+	export_constant(EFST_HOMUN_SKILL_POSTDELAY);
 	export_constant(EFST_ALMIGHTY);
 	export_constant(EFST_GVG_GIANT);
 	export_constant(EFST_GVG_GOLEM);
@@ -3467,7 +3475,7 @@
 	export_constant(EFST_QUEST_BUFF3);
 	export_constant(EFST_REUSE_LIMIT_RECALL);
 	export_constant(EFST_SAVEPOSITION);
-	export_constant(EFST_NPC_ICEEXPLO);
+	export_constant(EFST_HANDICAPSTATE_ICEEXPLO);
 	export_constant(EFST_FENRIR_CARD);
 	export_constant(EFST_REUSE_LIMIT_ASPD_POTION);
 	export_constant(EFST_MAXPAIN);
@@ -3571,7 +3579,7 @@
 	export_constant(EFST_GC_POISONINGWEAPON_OPERATOR);
 	export_constant(EFST_WS_WEAPONREFINE_OPERATOR);
 	export_constant(EFST_BS_REPAIRWEAPON_OPERATOR);
-	export_constant(EFST_UNREADMAIL_CHECK);
+	export_constant(EFST_GET_MAILBOX);
 	export_constant(EFST_JUMPINGCLAN);
 	export_constant(EFST_JP_OTP);
 	export_constant(EFST_HANDICAPTOLERANCE_LEVELGAP);
@@ -3890,13 +3898,13 @@
 	export_constant(EFST_PERIOD_USE_WORLDMAP);
 	export_constant(EFST_MISTY_FROST);
 	export_constant(EFST_MAGIC_POISON);
-	export_constant(EFST_KAUTE);
+	export_constant(EFST_MOVE_AGIT);
 	export_constant(EFST_REUSE_JPNONLY_LIMIT_I);
 	export_constant(EFST_REUSE_JPNONLY_LIMIT_J);
 	export_constant(EFST_REUSE_JPNONLY_LIMIT_K);
 	export_constant(EFST_JPNONLY_TACTICS);
 	export_constant(EFST_PRISON);
-	export_constant(EFST_MADOGEAR);
+	export_constant(EFST_MADOGEAR_TYPE);
 	export_constant(EFST_DEADLY_DEFEASANCE);
 	export_constant(EFST_CLIMAX_DES_HU);
 	export_constant(EFST_CLIMAX);
@@ -4171,6 +4179,44 @@
 	export_constant(EFST_C_RATE_PLUS);
 	export_constant(EFST_RESIST_PLUS);
 	export_constant(EFST_PVP_DUN_BUFF);
+	export_constant(EFST_TARGET_MARKER);
+	export_constant(EFST_BLOCK_SEAL);
+	export_constant(EFST_FROST_STORM);
+	export_constant(EFST_GROGGY);
+	export_constant(EFST_WARM_SHIELD);
+	export_constant(EFST_CONTENTS_1);
+	export_constant(EFST_CONTENTS_2);
+	export_constant(EFST_CONTENTS_3);
+	export_constant(EFST_CONTENTS_4);
+	export_constant(EFST_CONTENTS_5);
+	export_constant(EFST_CONTENTS_6);
+	export_constant(EFST_CONTENTS_7);
+	export_constant(EFST_CONTENTS_8);
+	export_constant(EFST_CONTENTS_9);
+	export_constant(EFST_CONTENTS_10);
+	export_constant(EFST_CONTENTS_11);
+	export_constant(EFST_CONTENTS_12);
+	export_constant(EFST_CONTENTS_13);
+	export_constant(EFST_CONTENTS_14);
+	export_constant(EFST_CONTENTS_15);
+	export_constant(EFST_CONTENTS_16);
+	export_constant(EFST_CONTENTS_17);
+	export_constant(EFST_CONTENTS_18);
+	export_constant(EFST_CONTENTS_19);
+	export_constant(EFST_CONTENTS_20);
+	export_constant(EFST_CONTENTS_21);
+	export_constant(EFST_CONTENTS_22);
+	export_constant(EFST_CONTENTS_23);
+	export_constant(EFST_CONTENTS_24);
+	export_constant(EFST_CONTENTS_25);
+	export_constant(EFST_C_BUFF_1);
+	export_constant(EFST_C_BUFF_2);
+	export_constant(EFST_CHASING);
+	export_constant(EFST_MYSTERY_POWDER);
+	export_constant(EFST_FIRE_CHARM_POWER);
+	export_constant(EFST_WATER_CHARM_POWER);
+	export_constant(EFST_WIND_CHARM_POWER);
+	export_constant(EFST_GROUND_CHARM_POWER);
 /// @APIHOOK_END
 /// Do not modify code above this, since it will be automatically generated by the API again
 	export_constant(EFST_MAX);
@@ -4244,6 +4290,7 @@
 	export_constant(RC2_ILLUSION_LUANDA);
 	export_constant(RC2_ILLUSION_FROZEN);
 	export_constant(RC2_ILLUSION_MOONLIGHT);
+	export_constant(RC2_EP16_DEF);
 	export_constant(RC2_MAX);
 
 	/* monster ai */
@@ -5138,7 +5185,8 @@
 	export_constant(STOR_MODE_NONE);
 	export_constant(STOR_MODE_GET);
 	export_constant(STOR_MODE_PUT);
-	
+	export_constant(STOR_MODE_ALL);
+
 	/* instance enter */
 	export_constant(IE_OK);
 	export_constant(IE_NOMEMBER);
@@ -7790,6 +7838,53 @@
 	export_constant(IG_P_BOOSTER_CALL_PACKAGE);
 	export_constant(IG_P_COMPENSATION_BOX);
 	export_constant(IG_ENCHANT_STONE_BOX35);
+	export_constant(IG_STOVE_CHANNELING_BOX_1);
+	export_constant(IG_STOVE_CHANNELING_BOX_2);
+	export_constant(IG_STOVE_CHANNELING_BOX_3);
+	export_constant(IG_STOVE_CHANNELING_BOX_4);
+	export_constant(IG_LI_NYANGVINE_BOX1_35);
+	export_constant(IG_LI_NYANGVINE_BOX2_35);
+	export_constant(IG_LI_NYANGVINE_BOX3_35);
+	export_constant(IG_A_SPEED_BOOSTER_BOX);
+	export_constant(IG_A_SPEED_BOOSTER_10_BOX);
+	export_constant(IG_L_INFINITY_POWER_PACK);
+	export_constant(IG_L_ALL_RED_PACK);
+	export_constant(IG_L_DEFENSE_POTION_PACK);
+	export_constant(IG_L_SPEED_FORCE_PACK);
+	export_constant(IG_L_SPECIAL_SPEED_PACK);
+	export_constant(IG_L_SPECIAL_FORCE_PACK);
+	export_constant(IG_COSTUMEMILEPACK_35_1);
+	export_constant(IG_COSTUMEMILEPACK_35_2);
+	export_constant(IG_COSTUMEMILEPACK_35_3);
+	export_constant(IG_2024ROS_BOX_1ST);
+	export_constant(IG_2024ROS_BOX_2ND);
+	export_constant(IG_2024ROS_BOX_3RD);
+	export_constant(IG_2024ROS_BOX_4TH);
+	export_constant(IG_2024ROS_BOX_5TH);
+	export_constant(IG_AEGIS_103234);
+	export_constant(IG_2024SPORTS_BOX);
+	export_constant(IG_22TH_PRESENT_BOX);
+	export_constant(IG_AEGIS_103316);
+	export_constant(IG_SVIP_GIFT_22THANIV);
+	export_constant(IG_VVIP_GIFT_22THANIV);
+	export_constant(IG_VIP_GIFT_22THANIV);
+	export_constant(IG_LI_NYANGVINE_BOX1_36);
+	export_constant(IG_LI_NYANGVINE_BOX2_36);
+	export_constant(IG_LI_NYANGVINE_BOX3_36);
+	export_constant(IG_2024_SUMMER_PACK_1);
+	export_constant(IG_2024_SUMMER_PACK_2);
+	export_constant(IG_2024_SUMMER_PACK_3);
+	export_constant(IG_2024_SUMMER_PACK_4);
+	export_constant(IG_LI_A_HD_CARNIUMBOX);
+	export_constant(IG_LI_A_HD_BRADIUMBOX);
+	export_constant(IG_22TH_PACKAGE_1);
+	export_constant(IG_22TH_PACKAGE_2);
+	export_constant(IG_22TH_PACKAGE_3);
+	export_constant(IG_22TH_PACKAGE_4);
+	export_constant(IG_CLB_SS_NYANG_PACK);
+	export_constant(IG_CLB_SS_REFINE1_PACK);
+	export_constant(IG_CLB_SS_REFINE2_PACK);
+	export_constant(IG_CLB_SS_EXP_PACK);
 
 	/* unit stop walking */
 	export_constant(USW_NONE);
@@ -9128,6 +9223,12 @@
 	export_constant_npc(JT_4_EP21_AURELIE);
 	export_constant_npc(JT_4_EP21_HOWELL_S);
 	export_constant_npc(JT_4_EP21_TAN_S);
+	export_constant_npc(JT_4_M_VACATION_MARAM);
+	export_constant_npc(JT_4_CLB_SS_FC);
+	export_constant_npc(JT_4_CLB_SS_TZ);
+	export_constant_npc(JT_4_CLB_SS_AJ);
+	export_constant_npc(JT_4_CLB_SS_LK);
+	export_constant_npc(JT_4_SMART_ANDRE);
 	export_constant_npc(JT_ROZ_MQ_XAVIER);
 	export_constant_npc(JT_ROZ_MQ_MOCLORD);
 	export_constant_npc(JT_ROZ_MQ_SKULD);
@@ -10492,7 +10593,21 @@
 	export_constant(HAT_EF_C_BABY_GLOOM);
 	export_constant(HAT_EF_WINTERNIGHTBELLS);
 	export_constant(HAT_EF_NIGHTSKYOFRUTIE);
+	export_constant(FOOTPRINT_EF_BASE);
+	export_constant(FOOTPRINT_EF_STR_BASE);
+	export_constant(FOOTPRINT_EF_PURPLESTAR);
+	export_constant(FOOTPRINT_EF_YELLOWSTAR);
+	export_constant(FOOTPRINT_EF_REDSTAR);
 	export_constant(HAT_EF_RAINBOW_POISON_MASTER);
+	export_constant(HAT_EF_C_ANCIENT_RUNE);
+	export_constant(HAT_EF_C_DRAGON_GREEN_AURA);
+	export_constant(HAT_EF_C_DRAGON_RED_AURA);
+	export_constant(HAT_EF_C_DRAGON_YELLOW_AURA);
+	export_constant(HAT_EF_INTERDIMENSIONAL_RIFT);
+	export_constant(HAT_EF_C_CLB_SS_LL);
+	export_constant(HAT_EF_VACATION);
+	export_constant(HAT_EF_C_FH_LOSTWING);
+	export_constant(FOOTPRINT_EF_DOGFOOT);
 
 	/* pet catch */
 	export_constant(PET_CATCH_UNIVERSAL);
@@ -11278,6 +11393,8 @@
 	export_constant(SCF_REMOVEONUNEQUIPARMOR);
 	export_constant(SCF_REMOVEONHERMODE);
 	export_constant(SCF_REQUIRENOWEAPON);
+	export_constant(SCF_REMOVEFROMHOMONWARP);
+	export_constant(SCF_REMOVEFROMHOMONMAPWARP);
 
 	/* enchantgrades */
 	export_constant(ENCHANTGRADE_NONE);

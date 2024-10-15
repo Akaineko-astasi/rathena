@@ -7535,7 +7535,7 @@ Body:
       TargetTrap: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: 5
+    HitCount: -5
     Element: Weapon
     CopyFlags:
       Skill:
@@ -18480,6 +18480,18 @@ Body:
     SplashArea: 5
     Duration1: 30000
     Status: Killing_Aura
+  - Id: 784
+    Name: ALL_EVENT_20TH_ANNIVERSARY
+    Description: RO 20th Anniversary Firecracker
+    MaxLevel: 1
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Flags:
+      AllowOnMado: true
+    Cooldown: 3000
+    Requires:
+      SpCost: 1
   - Id: 1001
     Name: KN_CHARGEATK
     Description: Charge Attack
@@ -25678,12 +25690,22 @@ Body:
       - Level: 1
         Amount: 2
       - Level: 2
-        Amount: 3
+        Amount: 2
       - Level: 3
-        Amount: 4
+        Amount: 3
       - Level: 4
-        Amount: 5
+        Amount: 3
       - Level: 5
+        Amount: 4
+      - Level: 6
+        Amount: 4
+      - Level: 7
+        Amount: 5
+      - Level: 8
+        Amount: 5
+      - Level: 9
+        Amount: 6
+      - Level: 10
         Amount: 6
     CopyFlags:
       Skill:
@@ -36171,7 +36193,7 @@ Body:
     TargetType: Attack
     Range: 9
     Hit: Single
-    HitCount: 1
+    HitCount: -2
     Element: Wind
     SplashArea: 1
     ActiveInstance: 14
@@ -36253,7 +36275,7 @@ Body:
       Splash: true
     Range: 9
     Hit: Multi_Hit
-    HitCount: 1
+    HitCount: -2
     Element: Fire
     SplashArea:
       - Level: 1
@@ -43018,10 +43040,10 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Range: 9
-    Hit: Single
-    HitCount: 1
-    AfterCastActDelay: 2000
+    Flags:
+      IgnoreGtb: true
+    AfterCastWalkDelay: 1000
+    Cooldown: 20000
     Requires:
       SpCost:
         - Level: 1
@@ -43044,11 +43066,7 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-      Splash: true
-    Hit: Single
-    HitCount: 1
-    SplashArea: -1
-    AfterCastActDelay: 35000
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 40000
@@ -43060,6 +43078,7 @@ Body:
         Time: 25000
       - Level: 5
         Time: 20000
+    Cooldown: 35000
     Requires:
       SpCost:
         - Level: 1
@@ -43077,7 +43096,6 @@ Body:
     Name: HLIF_BRAIN
     Description: Brain Surgery
     MaxLevel: 5
-    SplashArea: 1
   - Id: 8004
     Name: HLIF_CHANGE
     Description: Change
@@ -43085,7 +43103,7 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Hit: Single
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 60000
@@ -43093,7 +43111,7 @@ Body:
         Time: 180000
       - Level: 3
         Time: 300000
-    Duration2:
+    Cooldown:
       - Level: 1
         Time: 600000
       - Level: 2
@@ -43110,8 +43128,8 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Hit: Single
-    Duration2: 1000
+    AfterCastWalkDelay: 1000
+    Cooldown: 1000
     Requires:
       SpCost: 10
   - Id: 8006
@@ -43121,8 +43139,7 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Hit: Single
-    AfterCastActDelay: 30000
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 40000
@@ -43134,6 +43151,7 @@ Body:
         Time: 25000
       - Level: 5
         Time: 20000
+    Cooldown: 30000
     Requires:
       SpCost:
         - Level: 1
@@ -43151,8 +43169,6 @@ Body:
     Name: HAMI_SKIN
     Description: Adamantium Skin
     MaxLevel: 5
-    DamageFlags:
-      NoDamage: true
   - Id: 8008
     Name: HAMI_BLOODLUST
     Description: Bloodlust
@@ -43160,7 +43176,7 @@ Body:
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Hit: Single
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 60000
@@ -43168,7 +43184,7 @@ Body:
         Time: 180000
       - Level: 3
         Time: 300000
-    Duration2:
+    Cooldown:
       - Level: 1
         Time: 300000
       - Level: 2
@@ -43197,7 +43213,7 @@ Body:
         Count: -2
       - Level: 5
         Count: -3
-    AfterCastWalkDelay: 2000
+    Cooldown: 2000
     Requires:
       SpCost:
         - Level: 1
@@ -43218,6 +43234,7 @@ Body:
     DamageFlags:
       NoDamage: true
     Hit: Single
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 60000
@@ -43229,7 +43246,7 @@ Body:
         Time: 45000
       - Level: 5
         Time: 40000
-    Duration2:
+    Cooldown:
       - Level: 1
         Time: 60000
       - Level: 2
@@ -43263,6 +43280,7 @@ Body:
       NoDamage: true
     Hit: Single
     CastCancel: true
+    AfterCastWalkDelay: 1000
     Duration1:
       - Level: 1
         Time: 60000
@@ -43274,7 +43292,7 @@ Body:
         Time: 45000
       - Level: 5
         Time: 40000
-    Duration2:
+    Cooldown:
       - Level: 1
         Time: 60000
       - Level: 2
@@ -43307,7 +43325,7 @@ Body:
     Range: 15
     Hit: Single
     HitCount: 1
-    AfterCastActDelay: 1000
+    Cooldown: 1000
     Requires:
       SpCost: 1
   - Id: 8013
@@ -43316,20 +43334,8 @@ Body:
     MaxLevel: 5
     Type: Magic
     TargetType: Attack
-    Range: 15
-    Hit: Single
-    HitCount:
-      - Level: 1
-        Count: 1
-      - Level: 2
-        Count: 2
-      - Level: 3
-        Count: 3
-      - Level: 4
-        Count: 4
-      - Level: 5
-        Count: 5
-    AfterCastActDelay:
+    Range: 9
+    Cooldown:
       - Level: 1
         Time: 2000
       - Level: 2
@@ -43356,20 +43362,18 @@ Body:
     Name: HVAN_CHAOTIC
     Description: Benediction of Chaos
     MaxLevel: 5
+    Type: Magic
     TargetType: Self
     DamageFlags:
       NoDamage: true
-    Hit: Single
-    AfterCastActDelay: 3000
-    AfterCastWalkDelay: 3000
+    AfterCastWalkDelay: 1500
+    Cooldown: 3000
     Requires:
       SpCost: 40
   - Id: 8015
     Name: HVAN_INSTRUCT
     Description: Instruct
     MaxLevel: 5
-    DamageFlags:
-      NoDamage: true
   - Id: 8016
     Name: HVAN_EXPLOSION
     Description: Bio Explosion
@@ -43381,11 +43385,14 @@ Body:
       IgnoreElement: true
       IgnoreFlee: true
       IgnoreDefCard: true
+    Flags:
+      TargetTrap: true
     Hit: Single
     HitCount: 1
-    Element: Weapon
-    SplashArea: 4
-    AfterCastWalkDelay: 1000
+    Element: Neutral
+    SplashArea: 5
+    Duration1: 1500
+    CoolDown: 1000
     Requires:
       SpCost: 1
   - Id: 8018

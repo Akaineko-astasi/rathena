@@ -86,7 +86,7 @@ Body:
     Opt1: StoneWait
     Flags:
       SendOption: true
-      BossResist: true      
+      BossResist: true
       StopAttacking: true
     Fail:
       Whiteimprison: true
@@ -1758,6 +1758,7 @@ Body:
       NoSave: true
       NoRemoveOnDead: true
       RemoveOnChangeMap: true
+      BossResist: true
   - Status: Closeconfine2
     Icon: EFST_RG_CCONFINE_S
     DurationLookup: RG_CLOSECONFINE
@@ -1771,6 +1772,7 @@ Body:
       NoSave: true
       NoRemoveOnDead: true
       RemoveOnChangeMap: true
+      BossResist: true
     Fail:
       Closeconfine2: true
   - Status: Dancing
@@ -1822,6 +1824,7 @@ Body:
     Icon: EFST_ETERNALCHAOS
     DurationLookup: BD_ETERNALCHAOS
     CalcFlags:
+      Def: true
       Def2: true
     Flags:
       NoDispell: true
@@ -2600,13 +2603,17 @@ Body:
     DurationLookup: HLIF_AVOID
     CalcFlags:
       Speed: true
+    Flags:
+      NoSave: true
+      RemoveFromHomOnMapWarp: true
   - Status: Change
     DurationLookup: HLIF_CHANGE
     CalcFlags:
       Vit: true
       Int: true
     Flags:
-      RemoveOnChangeMap: true
+      NoSave: true
+      RemoveFromHomOnMapWarp: true
     Fail:
       Change: true
   - Status: Bloodlust
@@ -2614,6 +2621,9 @@ Body:
     CalcFlags:
       Batk: true
       Watk: true
+    Flags:
+      NoSave: true
+      RemoveFromHomOnMapWarp: true
   - Status: Fleet
     DurationLookup: HFLI_FLEET
     CalcFlags:
@@ -2627,7 +2637,11 @@ Body:
   - Status: Defence
     DurationLookup: HAMI_DEFENCE
     CalcFlags:
+      Def: true
       Vit: true
+    Flags:
+      NoSave: true
+      RemoveFromHomOnMapWarp: true
   - Status: Incaspdrate
     CalcFlags:
       Aspd: true
@@ -4126,7 +4140,7 @@ Body:
       Unlimitedhummingvoice: true
       Sircleofnature: true
   - Status: Deepsleep
-    Icon: EFST_HANDICAPSTATE_DEEP_SLEEP
+    Icon: EFST_DEEP_SLEEP
     DurationLookup: WM_LULLABY_DEEPSLEEP
     States:
       NoCast: true
@@ -7010,7 +7024,9 @@ Body:
     CalcFlags:
       Regen: true
   - Status: Earthshaker
+    Icon: EFST_EARTHSHAKER
     Flags:
+      BlEffect: true
       NoWarning: true
   - Status: Weaponblock_On
     Icon: EFST_WEAPONBLOCK_ON
@@ -7025,6 +7041,7 @@ Body:
     Icon: EFST_SPORE_EXPLOSION_DEBUFF
     DurationLookup: GN_SPORE_EXPLOSION
     Flags:
+      BlEffect: true
       NoDispell: true
       NoBanishingBuster: true
       NoClearance: true
@@ -7446,7 +7463,7 @@ Body:
       NoClearance: true
       NoClearbuff: true
   - Status: Madogear
-    Icon: EFST_MADOGEAR
+    Icon: EFST_MADOGEAR_TYPE
     CalcFlags:
       Speed: true
     Flags:
@@ -7758,6 +7775,7 @@ Body:
     Flags:
       BlEffect: true
       DisplayPc: true
+      OverlapIgnoreLevel: true
       SendVal1: true
   - Status: Climax_Earth
     Icon: EFST_CLIMAX_EARTH
@@ -7960,6 +7978,8 @@ Body:
     DurationLookup: EM_SPELL_ENCHANTING
     CalcFlags:
       Smatk: true
+    Flags:
+      DisplayPc: true
   - Status: Summon_Elemental_Ardor
     Icon: EFST_SUMMON_ELEMENTAL_ARDOR
     DurationLookup: EM_SUMMON_ELEMENTAL_ARDOR
@@ -8011,17 +8031,23 @@ Body:
     DurationLookup: TR_MUSICAL_INTERLUDE
     CalcFlags:
       Res: true
+    Flags:
+      DisplayPc: true
   - Status: Jawaii_Serenade
     Icon: EFST_JAWAII_SERENADE
     DurationLookup: TR_JAWAII_SERENADE
     CalcFlags:
       Smatk: true
       Speed: true
+    Flags:
+      DisplayPc: true
   - Status: Pron_March
     Icon: EFST_PRON_MARCH
     DurationLookup: TR_PRON_MARCH
     CalcFlags:
       Patk: true
+    Flags:
+      DisplayPc: true
   - Status: Roseblossom
     Icon: EFST_ROSEBLOSSOM
     DurationLookup: TR_ROSEBLOSSOM
@@ -8035,6 +8061,8 @@ Body:
       Powerful_Faith: true
       Firm_Faith: true
       Sincere_Faith: true
+    Flags:
+      DisplayPc: true
   - Status: Sincere_Faith
     Icon: EFST_SINCERE_FAITH
     DurationLookup: IQ_SINCERE_FAITH
@@ -8944,3 +8972,74 @@ Body:
       Bleeding: true
       Confusion: true
       Freeze: true
+  - Status: Bath_foam_a
+    Icon: EFST_BATH_FOAM_A
+    CalcFlags:
+      All: true
+    Flags:
+      NoBanishingBuster: true
+      NoClearance: true
+      NoClearbuff: true
+      NoDispell: true
+  - Status: Bath_foam_b
+    Icon: EFST_BATH_FOAM_B
+    CalcFlags:
+      All: true
+    Flags:
+      NoBanishingBuster: true
+      NoClearance: true
+      NoClearbuff: true
+      NoDispell: true
+  - Status: Bath_foam_c
+    Icon: EFST_BATH_FOAM_C
+    CalcFlags:
+      All: true
+    Flags:
+      NoBanishingBuster: true
+      NoClearance: true
+      NoClearbuff: true
+      NoDispell: true
+  - Status: Buchedenoel
+    Icon: EFST_BUCHEDENOEL
+    CalcFlags:
+      Cri: true
+      Hit: true
+      Regen: true
+    Flags:
+      NoClearbuff: true
+      NoDispell: true
+      NoBanishingBuster: true
+      NoClearance: true
+  - Status: Ep16_def
+    Icon: EFST_EP16_DEF
+    CalcFlags:
+      All: true
+    Flags:
+      NoClearbuff: true
+      NoDispell: true
+      NoBanishingBuster: true
+      NoClearance: true
+    EndOnStart:
+      Curse: true
+      Silence: true
+      Poison: true
+  - Status: Str_Scroll
+    Icon: EFST_STR_SCROLL
+    CalcFlags:
+      Str: true
+    Flags:
+      NoBanishingBuster: true
+      NoClearbuff: true
+      NoClearance: true
+      NoDispell: true
+      NoRemoveOnDead: true
+  - Status: Int_Scroll
+    Icon: EFST_INT_SCROLL
+    CalcFlags:
+      Int: true
+    Flags:
+      NoBanishingBuster: true
+      NoClearbuff: true
+      NoClearance: true
+      NoDispell: true
+      NoRemoveOnDead: true
