@@ -32,6 +32,8 @@ class SkillImpl;
 extern struct eri* skill_timer_ers;
 extern DBMap* bowling_db;
 
+extern char dir_ka;
+
 #ifndef TIMERSKILL_INTERVAL
 	#define TIMERSKILL_INTERVAL	150
 #endif
@@ -289,7 +291,7 @@ struct s_skill_db {
 
 	uint16 unit_id;								///< Unit ID. @see enum e_skill_unit_id
 	uint16 unit_id2;							///< Alternate unit ID. @see enum e_skill_unit_id
-	int32 unit_layout_type[MAX_SKILL_LEVEL];	///< Layout type. -1 is special layout, others are square with lenght*width: (val*2+1)^2
+	int32 unit_layout_type[MAX_SKILL_LEVEL];	///< Layout type. -1 is special layout, others are square with length*width: (val*2+1)^2
 	int32 unit_range[MAX_SKILL_LEVEL];			///< Unit cell effect range
 	int16 unit_interval;						///< Interval
 	int32 unit_target;							///< Unit target.
@@ -641,6 +643,7 @@ int32 skill_autospell(map_session_data *md,uint16 skill_id);
 
 int32 skill_calc_heal(block_list *src, block_list *target, uint16 skill_id, uint16 skill_lv, bool heal);
 
+int32 skill_trap_splash(block_list* bl, va_list ap);
 bool skill_check_cloaking(block_list *bl, struct status_change_entry *sce);
 int8 skill_isCopyable(map_session_data *sd, uint16 skill_id);
 
@@ -2899,6 +2902,9 @@ void skill_combo(block_list* src,block_list *dsrc, block_list *bl, uint16 skill_
 enum sc_type skill_get_sc(int16 skill_id);
 void skill_reveal_trap_inarea(block_list *src, int32 range, int32 x, int32 y);
 int32 skill_get_time3(struct map_data *mapdata, uint16 skill_id, uint16 skill_lv);
+
+bool skill_mirage_cast( block_list& src, block_list* bl, uint16 skill_id, uint16 skill_lv, int16 x, int16 y, t_tick tick, int32 flag );
+int32 skill_shimiru_check_cell( block_list* target, va_list ap );
 
 /// Variable name of copied skill by Plagiarism
 #define SKILL_VAR_PLAGIARISM "CLONE_SKILL"
